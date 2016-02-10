@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Butter Cheese Eggs</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="boter">Boter wins!!!!</string>
+    <string name="kaas">Kaas wins!!!!</string>
+    <string name="geen_winnaar">To bad, no winner this time</string>
+</resources>
