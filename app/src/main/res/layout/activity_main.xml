@@ -119,18 +119,18 @@
     </GridLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Game"
-        android:enabled="false"
-        android:id="@+id/bNewGame"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="newGame"
-        android:background="#60ffb3"
-        android:textColor="#ff0014"
-        android:padding="10dp"
-        android:textSize="20sp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nieuw spel"
+            android:enabled="false"
+            android:id="@+id/bNewGame"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="newGame"
+            android:background="#60ffb3"
+            android:textColor="#ff0014"
+            android:padding="10dp"
+            android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"

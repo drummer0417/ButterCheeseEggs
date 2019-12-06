@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Butter Cheese Eggs</string>
+    <string name="app_name">Boter, kaas en eieren</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="boter">Boter wins!!!!</string>
-    <string name="kaas">Kaas wins!!!!</string>
-    <string name="geen_winnaar">To bad, no winner this time</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="boter">Boter wint!!!!</string>
+    <string name="kaas">Kaas wint!!!!</string>
+    <string name="geen_winnaar">Jammer, jammer, geen winnaar</string>
 </resources>

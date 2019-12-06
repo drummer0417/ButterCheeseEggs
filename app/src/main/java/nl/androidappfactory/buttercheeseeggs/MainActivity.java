@@ -1,8 +1,8 @@
 package nl.androidappfactory.buttercheeseeggs;
 
+import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +11,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private static final int KAAS = 1;
     private static final int BOTER = 2;
@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         // check if cell is already used
         int cell = Integer.parseInt(counter.getTag().toString());
         if (usedCells[cell] == FREE) {
-            boolean weHaveAWinner = false;
 
             // apply counter image to counter
             if (currentPlayer == KAAS) {
@@ -100,15 +97,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private String usedToString() {
-        String result = new String();
-
-        for (int usedCell : usedCells) {
-            result = result + usedCell + ", ";
-        }
-        return result;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -129,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
         // loop over all 8 combi's
         for (int[] winningcombi : winningCombinatios) {
-//            int[] winningcombi = winningCombinatios[i];
 
             boolean okSoFarForAWinningCombi = false;
             // for each winning combi check if the numbers of that combi are equal to the numbers
@@ -137,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             for (int valueInWinningCombi : winningcombi) {
                 boolean okForSomeValues = false;
                 //
-                for (int i = 0; i < usedCells.length; i++) {
+                for (int usedCell : usedCells) {
                     if (usedCells[valueInWinningCombi] == currentPlayer) {
                         okForSomeValues = true;
                         break;
@@ -162,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < g.getChildCount(); i++) {
             g.getChildAt(i).setClickable(enable);
         }
-
         findViewById(R.id.bNewGame).setEnabled(!enable);
     }
 }
